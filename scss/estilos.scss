@@ -1,0 +1,54 @@
+$bg-color: #333;
+$color-light: #fff;
+$bk-large: 1024px;
+
+body {
+  padding: 0;
+  background-color: $bg-color;
+}
+
+.contenedor {
+  max-width: 768px;
+  margin: 3rem auto;
+  border: $color-light solid 3px;
+  background-color: $color-light;
+}
+
+img {
+  display: block;
+}
+
+.img {
+  &__principal {
+    margin-bottom: 0.2rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__resto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media screen and (min-width: $bk-large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    grid-gap: 0.3rem;
+
+    img {
+      cursor: pointer;
+      width: 100%;
+    }
+  }
+}
+// Animación para el Fade in
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}

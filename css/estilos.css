@@ -1,0 +1,36 @@
+body {
+  padding: 0;
+  background-color: #333; }
+
+.contenedor {
+  max-width: 768px;
+  margin: 3rem auto;
+  border: #fff solid 3px;
+  background-color: #fff; }
+
+img {
+  display: block; }
+
+.img__principal {
+  margin-bottom: 0.2rem; }
+  .img__principal img {
+    width: 100%; }
+.img__resto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.3rem; }
+  @media screen and (min-width: 1024px) {
+    .img__resto {
+      grid-template-columns: repeat(4, 1fr); } }
+  .img__resto img {
+    cursor: pointer;
+    width: 100%; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; } }
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards; }
+
+/*# sourceMappingURL=estilos.css.map */
